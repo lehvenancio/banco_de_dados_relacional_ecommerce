@@ -1,0 +1,16 @@
+select * from client; 
+select fname, lname, city, state from client;
+select category, review from product;
+
+select * from product where review > 3;
+select category, review from product where category = 'Eletronics';
+
+select concat(fname, ' ', lname) as fullname, cpf from client;
+
+select fname, lname, city, state from client order by fname;
+select category, review from product order by category;
+
+select  idorder, COUNT(*) as totalProducts from productOrder group by idorder having count(*) > 1;
+
+select fname, lname, cpf, orderStataus, ordeeDescription from ecommerce.client as clients 
+inner join ecommerce.orders as orders on (orders.idorderclient = clients.idclient); 
