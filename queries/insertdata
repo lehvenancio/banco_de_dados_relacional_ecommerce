@@ -1,0 +1,63 @@
+insert into client (Fname, Minit, Lname, CPF, addressStreet, addressNumber, neighborhood, city, state) values
+       ('Maria','M','Silva', 12346789, 'silva de prata', 29, 'Carangola', 'Cidade das flores', 'PR'),
+		   ('Matheus','O','Pimentel', 987654321,'alemeda', 289, 'Centro', 'Cidade das flores', 'PR'),
+			 ('Ricardo','F','Silva', 45678913,'alemeda vinha', 1009, 'Centro', 'Cidade das flores', 'PR'),
+			 ('Julia','S','França', 789123456,'lareijras', 861, 'Centro', 'Cidade das flores', 'PR'),
+			 ('Roberta','G','Assis', 98745631,'koller', 19, 'Centro', 'Cidade das flores', 'PR'),
+			 ('Isabela','M','Cruz', 654789123,'das flores', 28, 'Centro', 'Cidade das flores', 'PR');
+             
+insert into product (productName, classificationKids, category, Review, size) values
+			('Fone de ouvido',false,'Eletronics','4',null),
+			('Barbie Elsa',true,'Toys','3',null),
+			('Body Carters',true,'Clothes','5',null),
+			('Microfone Vedo - Youtuber',False,'Eletronics','4',null),
+      ('Sofá retrátil',False,'Forniture','3','3x57x80'),
+			('Farinha de arroz',False,'Groceries','2',null),
+			('Fire Stick Amazon',False,'Eletronics','3',null);
+            
+            
+insert into orders (idorder, orderStataus, ordeeDescription, sendValue, paymentCash) values 
+			(1, default,'compra via aplicativo',null,1),
+			(2,default,'compra via aplicativo',50,0),
+			(3,'Confirmado',null,null,1),
+			(4,default,'compra via web site',150,0);
+            
+insert into productOrder (idproductorder, idorder, quantity) values
+			(1,4,2),
+			(2,3,1),
+			(3,2,1);
+
+insert into productStorage (storageLocation,quantity) values 
+			('Rio de Janeiro',1000),
+			('Rio de Janeiro',500),
+			('São Paulo',10),
+			('São Paulo',100),
+			('São Paulo',10),
+			('Brasília',60);
+
+insert into storageLocation (idproductlocation, idstoragelocation, Location) values
+			(1,2,'RJ'),
+			(2,6,'GO');
+            
+insert into supplier (socialName, cnpj, contact) values 
+			('Almeida e filhos', 123456789123456,'21985474'),
+			('Eletrônicos Silva',854519649143457,'21985484'),
+			('Eletrônicos Valma', 934567893934695,'21975474');
+            
+insert into productsupplier (idproductsupplier, idproductsuplierproduct, quantity) values
+			(1,1,500),
+			(1,2,400),
+			(2,4,633),
+			(3,3,5),
+			(2,5,10);
+            
+insert into seller (socialName, Absname, cnpj, cpf, Location, contact) values 
+			('Tech eletronics', null, 123456789456321, null, 'Rio de Janeiro', 219946287),
+			('Botique Durgas',null,null,123456783,'Rio de Janeiro', 219567895),
+			('Kids World',null,456789123654485,null,'São Paulo', 1198657484);
+            
+insert into productSeller (idproductseller, idproduct, quantity) values 
+			(1,6,80),
+			(2,7,10);
+            
+
